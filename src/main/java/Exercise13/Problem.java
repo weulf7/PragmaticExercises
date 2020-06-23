@@ -15,7 +15,7 @@ public class Problem {
         double total= principal* Math.pow((1+newrate / compundYear),compundYear *perYear);
         double finalTotal=(total-principal)+principal;
 
-        System.out.println(principal + " invested at" + rate +" for " +perYear+" years compounded "+ compundYear +" times per year is $" +finalTotal+".");
+        System.out.println(principal + " invested at " + rate +" for " +perYear+" years compounded "+ compundYear +" times per year is $" +finalTotal+".");
 
     }
 
