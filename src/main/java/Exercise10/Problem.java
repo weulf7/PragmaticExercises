@@ -14,7 +14,7 @@ public class Problem {
 
         double subtotal = (firstPrice * firstQuantity)+(secondPrice*secondQuantity)+(thirdPrice*thirdQuantity);
         System.out.println("Subtotal: " +subtotal);
-        double tax = subtotal %5.5;
+        double tax = (subtotal * 5.5) / 100;
         System.out.println("Tax : " +tax);
         double total=subtotal +tax;
         System.out.println("Total : " +total);

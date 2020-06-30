@@ -15,7 +15,7 @@ public class Problem {
         int theAge = currentAge();
         int theRetirement = retirement();
         int agesLeft = theRetirement - theAge;
-        System.out.println("You have " +agesLeft +" years left, until reitrement.");
+        System.out.println("You have " +agesLeft +" years left, until retirement.");
         System.out.println("It 's "+ currentYear.get(Calendar.YEAR) + " ,so you can retire in "+ (currentYear.get(Calendar.YEAR)+ agesLeft ));
 
     }
