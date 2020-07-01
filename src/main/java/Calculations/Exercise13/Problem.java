@@ -8,14 +8,14 @@ public class Problem {
         int principal = principalAmount();
         double rate = annualRate();
         int perYear = amountYear();
-        int compundYear = compoundPerYear();
+        int compoundYear = compoundPerYear();
 
-        double newrate= rate /100;
+        double newRate= rate /100;
 
-        double total= principal* Math.pow((1+newrate / compundYear),compundYear *perYear);
+        double total= principal* Math.pow((1+newRate / compoundYear),compoundYear *perYear);
         double finalTotal=(total-principal)+principal;
 
-        System.out.println(principal + " invested at " + rate +" for " +perYear+" years compounded "+ compundYear +" times per year is $" +finalTotal+".");
+        System.out.println(principal + " invested at " + rate +" for " +perYear+" years compounded "+ compoundYear +" times per year is $" +finalTotal+".");
 
     }
 

@@ -1,5 +1,7 @@
 package InputProcessingAndOutput.Exercise1;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *
@@ -8,8 +10,15 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Exercise 1" );
-        Problem1 problem1= new Problem1();
-        problem1.start();
+        userName();
+
+    }
+
+    public static void userName(){
+        System.out.println("Enter your name please:");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        System.out.println("Hello "+name+", it is nice to meet you!");
+
     }
 }
