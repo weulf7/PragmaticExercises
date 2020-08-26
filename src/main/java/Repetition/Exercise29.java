@@ -2,28 +2,33 @@ package Repetition;
 
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class Exercise29 {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+handleBadInputs();
 
-            System.out.println("What is the rate of return: ");
+    }
 
-            String rate = scanner.nextLine();
+    private static int handleBadInputs(){
+        int total;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the rate of return:");
+        String input = scanner.nextLine();
 
-            Pattern pattern = Pattern.compile("\\d+(\\.\\d+)?");
-            Matcher matcher = pattern.matcher(rate);
 
-            while(rate.equals("0") || (!matcher.find())){
-                System.out.println("Your input is invalid. Try again.");
-                rate = scanner.nextLine();
-                matcher = pattern.matcher(rate);
-            }
-
-            System.out.println("It will take " + (72 / Double.parseDouble(rate)) + " years to double your investment.");
+        try{
+            total=72/Integer.parseInt(input);
+            System.out.println("It will take "+total+" years to double your investment!");
+        }catch (NumberFormatException n){
+            System.out.println("Please introduce numeric value!");
+            return handleBadInputs();
+        }catch (ArithmeticException a){
+            System.out.println("You can't enter 0!");
+            return handleBadInputs();
         }
+return 1;
+    }
+}
 
-        }
 
