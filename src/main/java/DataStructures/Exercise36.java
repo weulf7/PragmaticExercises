@@ -80,7 +80,7 @@ computingStatics();
             sd+=Math.pow(num-mean,2);
 
         }
-        return Math.sqrt(sd/(length-1));
+        return Math.sqrt(sd/(length));
     }
 
 
